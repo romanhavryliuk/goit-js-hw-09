@@ -7,7 +7,7 @@ const emailInput = form.querySelector('input[name="email"]');
 form.addEventListener('input', onFormInput);
 form.addEventListener('submit', onFormSubmit);
 populateForm();
-
+// Populate form fields on page load
 function onFormSubmit(event) {
     event.preventDefault();
     const form = event.target;
