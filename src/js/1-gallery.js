@@ -90,19 +90,3 @@ const lightbox = new SimpleLightbox(".gallery a", {
 });
 
 
-// gallery.addEventListener('click', onImgClick);
-
-// function onImgClick(event) {
-//   event.preventDefault();
-//   if (event.target.nodeName !== "IMG") {
-//     return
-//   } else {
-//     const imgSource = event.target.dataset.source;
-//     console.log(imgSource);
-  
-//     const instance = basicLightbox.create(`
-//     <img src="${imgSource}" width="1112" height="640">`
-//     );
-//     instance.show()
-//   };
-// }
