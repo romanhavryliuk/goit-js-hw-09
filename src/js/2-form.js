@@ -14,20 +14,17 @@ populateForm();
 
 
 function onFormInput(event) {
-  const { name, value } = event.target;
-  formData[name] = value.trim();
+    const { name, value } = event.target;
     if (name !== 'email' && name !== 'message') {
-    return;
-  };
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+      return;
+    };
+    formData[name] = value.trim();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
 function onFormSubmit(event) {
     event.preventDefault();
-    const form = event.target;
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-    if (!email || !message) {
+    if (!formData.email || !formData.message) {
         alert('Fill please all fields');
         return;
     }
